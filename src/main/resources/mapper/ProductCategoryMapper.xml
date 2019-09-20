@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?><!--此处文件名对应ProductCategoryMapper类-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.akie.dataobject.mapper.ProductCategoryMapper"><!--namespace处填Mapper文件所在的路径-->
+
+    <resultMap id="BaseResultMap" type="com.akie.dataobject.ProductCategory"><!--type填数据库对应的对象-->
+        <id column="category_id" property="categoryId" jdbcType="INTEGER" />
+        <id column="category_name" property="categoryName" jdbcType="VARCHAR" />
+        <id column="category_type" property="categoryType" jdbcType="INTEGER" />
+    </resultMap>
+
+
+    <select id="selectByCategoryType" resultMap="BaseResultMap" parameterType="java.lang.Integer"><!--此处如果传的是对象就填对象的路径-->
+        select category_id,category_name,category_type
+        from product_category
+        where category_type = #{category_type,jdbcType=INTEGER}
+    </select>
+
+    <!--然后去配置文件下配置路径-->
+</mapper>
