@@ -23,8 +23,8 @@ server:
 #    com.akie.LoggerTest: debug
 ##    root: debug
 wechat:
-    mpAppId: wx7184229314a85b03
-    mpAppSecret: 4a9ead5c969954dfabfcfe338cf85ec3
+    mpAppId: wx8d265226aa667d75
+    mpAppSecret: 24cea323bdb7ad4bc31d97eadc4947a2
     openAppId: wx6ad144e54af67d87
     openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
     mchId: 1483469312
